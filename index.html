@@ -1,0 +1,237 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex"><style>body{margin:0;font:14px system-ui}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>Amritas Jha Impact Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: masthead, impact strip, career timeline + delivery panels, four case files, skills ledger */
+:root{
+  --bg:#F5F7FA; --surface:#FFFFFF; --ink:#16263A; --muted:#5A6878; --line:#D9E0E8;
+  --navy:#1F3A5F; --accent:#C98A12; --accent-soft:#F6E8C8; --good:#2E7D5B; --track:#E6EBF1;
+  --f-display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Source Sans 3","Segoe UI",Arial,sans-serif;
+  --f-num:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1622; --surface:#16212F; --ink:#E8EEF5; --muted:#9AA8B8; --line:#2A3748;
+  --navy:#8FB3DE; --accent:#E7AE3C; --accent-soft:#3A2E14; --good:#5BC491; --track:#223042; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1622; --surface:#16212F; --ink:#E8EEF5; --muted:#9AA8B8; --line:#2A3748;
+  --navy:#8FB3DE; --accent:#E7AE3C; --accent-soft:#3A2E14; --good:#5BC491; --track:#223042; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto;padding-block:32px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:28px}
+h1,h2,h3{font-family:var(--f-display);margin:0;text-wrap:balance}
+.eyebrow{font-family:var(--f-body);font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+/* masthead */
+.mast{display:grid;grid-template-columns:1fr auto;gap:16px 32px;align-items:end;border-bottom:2px solid var(--navy);padding-bottom:20px}
+.mast h1{font-size:clamp(34px,6vw,56px);font-weight:800;letter-spacing:-.02em;color:var(--navy);line-height:1}
+.mast .role{font-family:var(--f-display);font-weight:500;font-size:clamp(16px,2.2vw,20px);margin-top:8px}
+.mast .meta{text-align:right;color:var(--muted);font-size:14px;display:grid;gap:2px}
+.mast .meta b{color:var(--ink);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chip{font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--surface)}
+/* impact strip */
+.kpis{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.kpi{background:var(--surface);padding:16px 14px 14px;display:grid;gap:4px;align-content:start}
+.kpi .v{font-family:var(--f-num);font-weight:700;font-size:clamp(26px,3vw,34px);line-height:1.05;color:var(--navy);font-variant-numeric:tabular-nums}
+.kpi .v small{font-size:.55em;color:var(--accent);margin-left:2px}
+.kpi .l{font-weight:600;font-size:14px;line-height:1.3}
+.kpi .s{font-size:12px;color:var(--muted);line-height:1.35}
+/* panels */
+.grid2{display:grid;grid-template-columns:1.55fr 1fr;gap:20px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px;min-width:0;display:grid;gap:14px;align-content:start}
+.panel h2{font-size:20px;font-weight:700}
+.panel .sub{color:var(--muted);font-size:14px;margin-top:2px}
+svg text{font-family:var(--f-body)}
+.tl-wrap{overflow-x:auto}
+.rings{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ring{display:grid;justify-items:center;gap:6px;text-align:center}
+.ring .cap{font-size:13px;font-weight:600;line-height:1.3}
+.bars{display:grid;gap:14px}
+.bar-row{display:grid;gap:6px}
+.bar-row .t{display:flex;justify-content:space-between;gap:8px;font-size:13px;font-weight:600}
+.bar-row .t span:last-child{font-family:var(--f-num);color:var(--good);white-space:nowrap}
+.bar{display:grid;gap:4px}
+.bar div{height:12px;border-radius:3px;display:flex;align-items:center}
+.bar .before{background:var(--track)}
+.bar .after{background:var(--navy)}
+.bar .lab{display:flex;justify-content:space-between;font-family:var(--f-num);font-size:12px;color:var(--muted)}
+/* cases */
+.cases{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px;display:grid;gap:10px;align-content:start;min-width:0}
+.case .where{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.case h3{font-size:19px;font-weight:700;line-height:1.25}
+.case dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 12px}
+.case dt{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding-top:2px}
+.case dd{margin:0;font-size:15px}
+.result{display:flex;align-items:baseline;gap:10px;padding:10px 12px;background:var(--accent-soft);border-radius:6px}
+.result b{font-family:var(--f-num);font-size:22px;color:var(--ink);white-space:nowrap}
+.result span{font-size:14px}
+/* skills */
+.ledger{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.ledger h3{font-family:var(--f-body);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.ledger ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.ledger li{font-size:13px;padding:3px 9px;border-radius:4px;background:var(--bg);border:1px solid var(--line)}
+.ledger li.core{border-color:var(--navy);color:var(--navy);font-weight:600}
+.creds{display:grid;gap:4px;font-size:14px}
+.foot{color:var(--muted);font-size:12px;border-top:1px solid var(--line);padding-top:12px}
+@media (max-width:980px){.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}.grid2{grid-template-columns:1fr}.ledger{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.mast{grid-template-columns:1fr}.mast .meta{text-align:left}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.cases{grid-template-columns:1fr}.ledger{grid-template-columns:1fr}.rings{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion:no-preference){.ring circle.val{transition:stroke-dashoffset .9s ease}}
+</style>
+
+<div class="wrap">
+  <header class="mast">
+    <div>
+      <div class="eyebrow">Impact portfolio</div>
+      <h1>Amritas Jha</h1>
+      <div class="role">Data, Product &amp; Agile Delivery Leader</div>
+      <div class="chips">
+        <span class="chip">Banking</span><span class="chip">Healthcare payer</span><span class="chip">Automotive</span><span class="chip">Retail</span>
+      </div>
+    </div>
+    <div class="meta">
+      <span><b>18+ years</b> · BA → Data Analyst → Product Owner → Scrum Master</span>
+      <span>Pittsburgh, PA</span>
+    </div>
+  </header>
+
+  <section class="kpis" aria-label="Headline results">
+    <div class="kpi"><div class="v">$2.5M</div><div class="l">Revenue credited in one PI</div><div class="s">Product-propensity app fed by her Commercial Data Mart crew · PNC</div></div>
+    <div class="kpi"><div class="v">27</div><div class="l">Downstream apps fed</div><div class="s">Commercial Data Mart, the main data source · PNC</div></div>
+    <div class="kpi"><div class="v">20</div><div class="l">Scrum &amp; Kanban teams coached</div><div class="s">Across the Data Strategy wing · PNC</div></div>
+    <div class="kpi"><div class="v">63<small>%</small></div><div class="l">Faster member appeals</div><div class="s">30 → 11 days per case · BCBS MN via Highmark</div></div>
+    <div class="kpi"><div class="v">$200K</div><div class="l">Saved in six months</div><div class="s">Up to 77% shorter cycle times, 23 clinical teams · Highmark</div></div>
+    <div class="kpi"><div class="v">82<small>%</small></div><div class="l">UM adoption in 2 months</div><div class="s">By BCBS MN operations after go-live · Highmark</div></div>
+  </section>
+
+  <section class="grid2">
+    <div class="panel">
+      <div><h2>Career timeline</h2><div class="sub">Roles to scale, 2008–2026</div></div>
+      <div class="tl-wrap"><svg id="timeline" role="img" aria-label="Career timeline from 2008 to 2026"></svg></div>
+    </div>
+    <div class="panel">
+      <div><h2>Delivery at PNC</h2><div class="sub">Average across five Agile teams she led</div></div>
+      <div class="rings">
+        <div class="ring" data-pct="82"><svg width="112" height="112" viewBox="0 0 112 112" aria-hidden="true"></svg><div class="cap">Committed-to-completed</div></div>
+        <div class="ring" data-pct="77"><svg width="112" height="112" viewBox="0 0 112 112" aria-hidden="true"></svg><div class="cap">Epic closure</div></div>
+      </div>
+      <div><h2 style="font-size:17px">Before → after</h2></div>
+      <div class="bars">
+        <div class="bar-row">
+          <div class="t"><span>Member appeals, days per case</span><span>−63%</span></div>
+          <div class="bar"><div class="before" style="width:100%"></div><div class="after" style="width:36.7%"></div>
+          <div class="lab"><span>Before 30</span><span>After 11</span></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="t"><span>Loading a ~1M-row extract, minutes</span><span>~95% faster</span></div>
+          <div class="bar"><div class="before" style="width:100%"></div><div class="after" style="width:5.8%"></div>
+          <div class="lab"><span>Toad ~60</span><span>Python tool 3–4</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow" style="margin-bottom:12px">Selected work</div>
+    <div class="cases">
+      <article class="case">
+        <div class="where">PNC · Data Strategy</div>
+        <h3>Customer 360 data for predictive sales</h3>
+        <dl>
+          <dt>Problem</dt><dd>Downstream apps needed accurate Customer 360 data to predict the product a customer is most likely to buy next.</dd>
+          <dt>Role</dt><dd>Scrum Master of the Commercial Data Mart crew, the main source for 27 downstream applications; one of four data analysts in Data Strategy.</dd>
+        </dl>
+        <div class="result"><b>$2.5M</b><span>revenue the business sponsor credited to the propensity app in a single PI</span></div>
+      </article>
+      <article class="case">
+        <div class="where">Highmark · for client BCBS MN</div>
+        <h3>B2B Member Appeals redesign</h3>
+        <dl>
+          <dt>Problem</dt><dd>Paper-heavy appeals moved slowly across intake, clinical, physician, print shop, technology, QE and data teams.</dd>
+          <dt>Role</dt><dd>Process consultant: business case, current- and future-state design. Digitized paper submissions, auto-filled procedure codes, held clinician review until intake was complete.</dd>
+        </dl>
+        <div class="result"><b>30 → 11</b><span>days per case, a 63% cut in processing time</span></div>
+      </article>
+      <article class="case">
+        <div class="where">PNC · Highmark</div>
+        <h3>Agile at scale</h3>
+        <dl>
+          <dt>Problem</dt><dd>Teams needed consistent ways of working and leaders needed proof the Agile transformation was paying off.</dd>
+          <dt>Role</dt><dd>Led Highmark's Waterfall-to-Agile move as acting Scrum Master. At PNC, coached 20 teams, chaired Scrum of Scrums, joined quarterly SAFe PI Planning, and defined the KPIs behind Tableau reporting to the CIO.</dd>
+        </dl>
+        <div class="result"><b>82% · 77%</b><span>committed-to-completed and epic closure across five teams</span></div>
+      </article>
+      <article class="case">
+        <div class="where">PNC · API library</div>
+        <h3>API products feeding in-house AI tools</h3>
+        <dl>
+          <dt>Problem</dt><dd>Engineering's AI tools needed governed, consumption-ready data through APIs.</dd>
+          <dt>Role</dt><dd>Owner of the API library: roadmap, backlog priorities, consumption analysis, UAT plans.</dd>
+        </dl>
+        <div class="result"><b>3 tools</b><span>plain-English data mart queries, automated post-release data testing, semi-automated release promotion with root-cause analysis</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="ledger">
+      <div><h3>Data &amp; analytics</h3><ul>
+        <li class="core">SQL</li><li class="core">Teradata</li><li class="core">Dimensional Modeling</li><li class="core">Tableau</li><li class="core">Power BI</li><li class="core">Python</li><li class="core">GitHub</li><li>REST APIs</li><li>ETL</li><li>Data Marts</li><li>Hadoop</li><li>DB2</li></ul></div>
+      <div><h3>Product &amp; analysis</h3><ul>
+        <li>Backlog &amp; roadmap</li><li>User stories</li><li>Gherkin acceptance criteria</li><li>Process &amp; data mapping</li><li>UAT</li><li>Root-cause analysis</li><li>KPI definition</li></ul></div>
+      <div><h3>Delivery</h3><ul>
+        <li>Scrum</li><li>Kanban</li><li>SAFe</li><li>PI Planning</li><li>Scrum of Scrums</li><li>Waterfall</li></ul></div>
+      <div><h3>Tools</h3><ul>
+        <li>Jira</li><li>Confluence</li><li>Salesforce</li><li>Pega</li><li>SharePoint</li><li>IBM Rational</li><li>Toad Datapoint</li></ul></div>
+    </div>
+    <div class="creds">
+      <div><b>Certifications:</b> Certified ScrumMaster (CSM) · ICAgile Certified Professional (ICP) · SAFe POPM, in progress (2027)</div>
+      <div><b>Education:</b> Bachelor of Engineering, Electronics and Communication, Nagpur University, India</div>
+    </div>
+  </section>
+
+  <div class="foot">Figures are from projects she worked on; revenue and adoption figures were reported by the business sponsor and client.</div>
+</div>
+
+<script>
+(function(){
+  var css=getComputedStyle(document.documentElement);
+  function tok(n){return css.getPropertyValue(n).trim();}
+  // rings
+  document.querySelectorAll('.ring').forEach(function(r){
+    var p=+r.dataset.pct, svg=r.querySelector('svg'), R=46, C=2*Math.PI*R;
+    svg.innerHTML='<circle cx="56" cy="56" r="'+R+'" fill="none" stroke="var(--track)" stroke-width="10"/>'+
+      '<circle class="val" cx="56" cy="56" r="'+R+'" fill="none" stroke="var(--navy)" stroke-width="10" stroke-linecap="round" transform="rotate(-90 56 56)" stroke-dasharray="'+C+'" stroke-dashoffset="'+(C*(1-p/100))+'"/>'+
+      '<text x="56" y="63" text-anchor="middle" style="font-family:var(--f-num);font-weight:700;font-size:24px" fill="var(--ink)">'+p+'%</text>';
+  });
+  // timeline
+  var rows=[
+    {n:"Infosys",t:"Consultant – Technology & Delivery",d:"BofA · Mercedes-Benz · WellPoint · Aetna",s:2008,e:2014},
+    {n:"PNC via Mastech",t:"Business Analyst",d:"Claims-storage migration",s:2014,e:2014.58},
+    {n:"Highmark",t:"Lead BA & ad hoc Scrum Master",d:"B2B apps for BCBS MN",s:2014.58,e:2019.92},
+    {n:"Retail Portfolio Owner",t:"Family real estate & retail",d:"IT adoption, budgets, vendors",s:2019.92,e:2023.08},
+    {n:"PNC",t:"A.V.P., Data Expert – Data Strategy",d:"Data mart · API library · Agile",s:2023.08,e:2026.75}
+  ];
+  var svg=document.getElementById('timeline'), W=660, L=215, Rt=W-12, rowH=50, top=8, H=top+rows.length*rowH+28;
+  svg.setAttribute('viewBox','0 0 '+W+' '+H); svg.setAttribute('width','100%'); svg.style.minWidth='560px';
+  var x=function(y){return L+(y-2008)/(2027-2008)*(Rt-L);}, h='';
+  [2008,2011,2014,2017,2020,2023,2026].forEach(function(y){
+    h+='<line x1="'+x(y)+'" x2="'+x(y)+'" y1="'+top+'" y2="'+(H-22)+'" stroke="var(--line)" stroke-width="1"/>';
+    h+='<text x="'+x(y)+'" y="'+(H-6)+'" text-anchor="middle" font-size="12" fill="var(--muted)" style="font-family:var(--f-num)">'+y+'</text>';
+  });
+  rows.forEach(function(r,i){
+    var y=top+i*rowH, cur=i===rows.length-1;
+    h+='<text x="0" y="'+(y+18)+'" font-size="14" font-weight="600" fill="var(--ink)">'+r.n+'</text>';
+    h+='<text x="0" y="'+(y+35)+'" font-size="11.5" fill="var(--muted)">'+r.t+'</text>';
+    var bx=x(r.s), bw=Math.max(x(r.e)-x(r.s),6);
+    h+='<rect x="'+bx+'" y="'+(y+8)+'" width="'+bw+'" height="18" rx="3" fill="'+(cur?'var(--navy)':(i===3?'var(--accent)':'var(--navy)'))+'" opacity="'+(cur?1:(i===3?0.85:0.6))+'"/>';
+    var lx=bx+bw+6, anchor='start';
+    if(lx>Rt-150){lx=bx-6;anchor='end';}
+    h+='<text x="'+(bw>150?bx+8:lx)+'" y="'+(y+21)+'" font-size="11.5" font-weight="600" text-anchor="'+(bw>150?'start':anchor)+'" fill="'+(bw>150?'var(--surface)':'var(--muted)')+'">'+r.d+'</text>';
+  });
+  svg.innerHTML=h;
+})();
+</script>
+</body></html>
